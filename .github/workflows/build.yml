@@ -650,7 +650,7 @@ jobs:
           CW_LLVM_MINGW_DL: '1'
           CW_LLVM_MINGW_ONLY: '0'
         run: |
-          export CW_CONFIG='${{ github.ref_name }}-boringssl-win'
+          export CW_CONFIG='${{ github.ref_name }}-boringssl-win-x64'
           export CW_REVISION='${{ github.sha }}'
           . ./_versions.sh
           docker trust inspect --pretty "${DOCKER_IMAGE}"
@@ -683,7 +683,7 @@ jobs:
           CW_LLVM_MINGW_DL: '1'
           CW_LLVM_MINGW_ONLY: '0'
         run: |
-          export CW_CONFIG='${{ github.ref_name }}-boringssl-win-gcc'
+          export CW_CONFIG='${{ github.ref_name }}-boringssl-win-x64-gcc'
           export CW_REVISION='${{ github.sha }}'
           . ./_versions.sh
           docker trust inspect --pretty "${DOCKER_IMAGE}"
